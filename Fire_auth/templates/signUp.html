@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    
+</head>
+<body>
+    <form action="/postsignup/" method="POST">
+        {% csrf_token %}
+        <label id="Name">Name:</label>
+        <input type="text" name="Name">
+        <p></p>
+        <label id="email">Email:</label>
+        <input type="email" name="email" placeholder="Email_id">
+        <p></p>
+        <label id="pass">Password:</label>
+        <input type="password" name="pass" placeholder="Password">
+        <p></p>
+        <input type="submit" value="SignUp">
+    </form>
+</body>
+</html>
